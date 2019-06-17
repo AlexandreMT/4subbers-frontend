@@ -10,7 +10,6 @@ export class BaseService {
   constructor() {
     this.headers = new HttpHeaders()
       .set('Accept', 'application/json');
-
   }
 
   setHeader(token = '') {
@@ -18,5 +17,4 @@ export class BaseService {
       .set('Accept', 'application/json')
       .set('Authorization', token);
   }
-
 }
