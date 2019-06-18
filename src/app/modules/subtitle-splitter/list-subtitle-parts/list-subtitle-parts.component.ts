@@ -29,8 +29,10 @@ export class ListSubtitlePartsComponent implements OnInit {
     if (this.getPartsSubscription) { this.getPartsSubscription.unsubscribe(); }
     this.getPartsSubscription = this.subtitleSplitterService.getSubtitleParts(this.url)
       .subscribe((res) => {
+        this.getPartsSubscription.unsubscribe();
         console.log(res);
       }, (error) => {
+        this.getPartsSubscription.unsubscribe();
         console.log(error);
       });
   }
