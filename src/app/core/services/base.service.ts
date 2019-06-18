@@ -12,9 +12,9 @@ export class BaseService {
       .set('Accept', 'application/json');
   }
 
-  setHeader(token = '') {
+  setHeader() {
     this.headers = new HttpHeaders()
       .set('Accept', 'application/json')
-      .set('Authorization', token);
+      .set('Content-type', 'application/json');
   }
 }

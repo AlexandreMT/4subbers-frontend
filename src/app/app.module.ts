@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SubtitleSplitterComponent } from './modules/subtitle-splitter/subtitle-splitter.component';
 import {SubtitleSplitterModule} from './modules/subtitle-splitter/subtitle-splitter.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {SubtitleSplitterModule} from './modules/subtitle-splitter/subtitle-split
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SubtitleSplitterModule
+    SubtitleSplitterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  API: 'http://beta.insanos.tv/api/',
+  API: 'https://cors-anywhere.herokuapp.com/https://beta.insanos.tv/api',
   production: false
 };
 

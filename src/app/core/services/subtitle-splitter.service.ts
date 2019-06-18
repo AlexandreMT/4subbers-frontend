@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class SubtitleSplitterService extends BaseService{
+export class SubtitleSplitterService extends BaseService {
 
   constructor(private http: HttpClient) {
     super();
