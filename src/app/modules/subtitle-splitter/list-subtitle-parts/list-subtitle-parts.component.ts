@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {SubtitleSplitterService} from '../../../core/services/subtitle-splitter.service';
+import {SubtitleSplitterService} from '../../../core/http/services/subtitle-splitter.service';
 import {Subscription} from 'rxjs';
 
 @Component({
