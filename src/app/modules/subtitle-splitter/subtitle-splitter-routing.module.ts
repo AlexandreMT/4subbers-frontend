@@ -5,7 +5,7 @@ import {SubtitleSplitterComponent} from './subtitle-splitter.component';
 
 const routes: Routes = [
   {
-    path: 'subtitle-splitter',
+    path: '',
     component: SubtitleSplitterComponent,
     children: [
       {
@@ -18,6 +18,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  declarations: [SubtitleSplitterComponent]
 })
 export class SubtitleSplitterRoutingModule { }

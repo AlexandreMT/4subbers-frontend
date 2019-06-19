@@ -11,6 +11,11 @@ const routes: Routes = [
   {
     path: 'home',
     component: AppComponent
+  },
+  {
+    path: 'subtitle-splitter',
+    loadChildren: () => import('./modules/subtitle-splitter/subtitle-splitter.module')
+      .then(module => module.SubtitleSplitterModule)
   }
 ];
 
