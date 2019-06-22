@@ -27,4 +27,24 @@ export class SubtitleSplitterService extends BaseService {
       )
     );
   }
+
+  splitSubtitle(form, subtitle): Observable<any> {
+    this.setHeader();
+    const subtitleFormData: FormData = new FormData();
+
+    subtitleFormData.append('name', form.name);
+    subtitleFormData.append('parts', form.parts);
+    subtitleFormData.append('subtitle', subtitle[0]);
+
+    return this.http.post(SubtitleSplitterApi.splitSubtitle(), subtitleFormData, { headers: this.headers }).pipe(
+      tap(
+        data => {
+          return { ...data };
+        },
+        error => {
+          return error;
+        }
+      )
+    );
+  }
 }
