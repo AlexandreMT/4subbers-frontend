@@ -15,7 +15,7 @@ export class SubtitleSplitterService extends BaseService {
   }
 
   getSubtitleParts(url): Observable<any> {
-    this.setHeader();
+    this.setHeaderFile();
     return this.http.get(SubtitleSplitterApi.getSubtitleParts(url), { headers: this.headers }).pipe(
       tap(
         data => {
@@ -29,14 +29,14 @@ export class SubtitleSplitterService extends BaseService {
   }
 
   splitSubtitle(form, subtitle): Observable<any> {
-    this.setHeader();
-    const subtitleFormData: FormData = new FormData();
+    this.setHeaderFile();
+    const subtitleFormData = new FormData();
 
     subtitleFormData.append('name', form.name);
     subtitleFormData.append('parts', form.parts);
     subtitleFormData.append('subtitle', subtitle[0]);
 
-    return this.http.post(SubtitleSplitterApi.splitSubtitle(), subtitleFormData, { headers: this.headers }).pipe(
+    return this.http.post(SubtitleSplitterApi.splitSubtitle(), subtitleFormData, { headers: this.headers,  }).pipe(
       tap(
         data => {
           return { ...data };

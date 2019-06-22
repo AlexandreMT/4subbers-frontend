@@ -17,4 +17,11 @@ export class BaseService {
       .set('Accept', 'application/json')
       .set('Content-type', 'application/json');
   }
+
+  setHeaderFile() {
+    this.headers = new HttpHeaders()
+      .set('Accept', 'x-www-form-urlencoded')
+      .set('Access-Control-Allow-Origin', '*')
+      .set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  }
 }

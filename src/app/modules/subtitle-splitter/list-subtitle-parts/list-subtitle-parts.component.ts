@@ -33,7 +33,6 @@ export class ListSubtitlePartsComponent implements OnInit {
       .subscribe((res) => {
         this.getPartsSubscription.unsubscribe();
         this.project = res[0];
-        console.log(this.project);
       }, (error) => {
         this.getPartsSubscription.unsubscribe();
         console.log(error);
