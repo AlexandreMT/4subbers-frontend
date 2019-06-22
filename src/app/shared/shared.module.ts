@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import {HeaderComponent} from '../core/header/header.component';
 import {RouterModule} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CollapseModule} from 'ngx-bootstrap';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -10,7 +12,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     CommonModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CollapseModule,
+    BrowserAnimationsModule
   ],
   exports: [
     HeaderComponent
