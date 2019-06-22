@@ -1,8 +1,8 @@
 <div class="container">
-  <h3 class="text-center mt-3 mb-3">{{ project?.projeto }}</h3>
+  <h3 class="text-center mt-3 mb-3">{{ project['projeto'] }}</h3>
 
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let part of project?.parts; let i = index">
+    <li class="list-group-item" *ngFor="let part of project['parts']; let i = index">
       <a [attr.href]="'http://beta.insanos.tv/api/subtitle-split/storage/' + part?.nome_arquivo">
         Parte {{ i + 1 }}: {{ part?.nome_arquivo }}
       </a>
