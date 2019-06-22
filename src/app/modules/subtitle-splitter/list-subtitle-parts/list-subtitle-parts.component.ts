@@ -13,6 +13,8 @@ export class ListSubtitlePartsComponent implements OnInit {
 
   public getPartsSubscription: Subscription;
 
+  public project: any[] = [];
+
   constructor(private route: ActivatedRoute,
               private subtitleSplitterService: SubtitleSplitterService) { }
 
@@ -30,7 +32,8 @@ export class ListSubtitlePartsComponent implements OnInit {
     this.getPartsSubscription = this.subtitleSplitterService.getSubtitleParts(this.url)
       .subscribe((res) => {
         this.getPartsSubscription.unsubscribe();
-        console.log(res);
+        this.project = res[0];
+        console.log(this.project);
       }, (error) => {
         this.getPartsSubscription.unsubscribe();
         console.log(error);
