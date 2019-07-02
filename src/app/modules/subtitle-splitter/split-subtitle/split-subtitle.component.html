@@ -13,6 +13,6 @@
       <label for="subtitle">Arquivo da legenda base:</label>
       <input (change)="onChangeSubtitle($event.target.files)" formControlName="subtitle" type="file" class="form-control-file" id="subtitle">
     </div>
-    <button (click)="splitSubtitle()" type="button" class="btn btn-primary btn-block">Confirmar</button>
+    <button [disabled]="subtitleForm.invalid" (click)="splitSubtitle()" type="button" class="btn btn-primary btn-block">Confirmar</button>
   </form>
 </div>
