@@ -29,12 +29,13 @@ export class SplitSubtitleComponent implements OnInit {
 
   async splitSubtitle() {
     if (this.splitSubtitleSubscription) { this.splitSubtitleSubscription.unsubscribe(); }
-    console.log(this.subtitleForm.value, this.subtitle);
     this.splitSubtitleSubscription = await this.subtitleSplitterService.splitSubtitle(this.subtitleForm.value, this.subtitle)
       .subscribe((res) => {
         this.router.navigate(['/subtitle-splitter', res[0].url]);
+        this.splitSubtitleSubscription.unsubscribe();
       }, (error) => {
         console.log(error);
+        this.splitSubtitleSubscription.unsubscribe();
       });
   }
 
