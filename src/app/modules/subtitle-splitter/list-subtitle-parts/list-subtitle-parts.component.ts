@@ -13,7 +13,7 @@ export class ListSubtitlePartsComponent implements OnInit {
 
   public getPartsSubscription: Subscription;
 
-  public project: any[] = [];
+  public project: any;
 
   constructor(private route: ActivatedRoute,
               private subtitleSplitterService: SubtitleSplitterService) { }
