@@ -1,4 +1,4 @@
 export const environment = {
-  API: 'https://cors-anywhere.herokuapp.com/https://beta.insanos.tv/api',
+  API: 'https://disco-plane-245905.appspot.com',
   production: true
 };
