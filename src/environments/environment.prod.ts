@@ -1,4 +1,4 @@
 export const environment = {
-  API: 'https://disco-plane-245905.appspot.com',
+  API: 'https://api-4subbers.herokuapp.com/',
   production: true
 };
