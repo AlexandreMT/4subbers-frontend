@@ -28,7 +28,7 @@ export class SubtitleSplitterService extends BaseService {
     );
   }
 
-  splitSubtitle(form, subtitle): Observable<any> {
+  splitSubtitleByCue(form, subtitle): Observable<any> {
     this.setHeaderFile();
     const subtitleFormData = new FormData();
 
@@ -36,7 +36,7 @@ export class SubtitleSplitterService extends BaseService {
     subtitleFormData.append('parts', form.parts);
     subtitleFormData.append('subtitle', subtitle[0]);
 
-    return this.http.post(SubtitleSplitterApi.splitSubtitle(), subtitleFormData, { headers: this.headers,  }).pipe(
+    return this.http.post(SubtitleSplitterApi.splitSubtitleByCue(), subtitleFormData, { headers: this.headers,  }).pipe(
       tap(
         data => {
           return { ...data };

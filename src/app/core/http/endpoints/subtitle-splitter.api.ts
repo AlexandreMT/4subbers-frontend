@@ -7,7 +7,7 @@ export class SubtitleSplitterApi {
     return `${API}/subtitle-split/get-parts/${url}`;
   }
 
-  public static splitSubtitle = () => {
-    return `${API}/subtitle-split/split`;
+  public static splitSubtitleByCue = () => {
+    return `${API}/subtitle-split/cue`;
   }
 }
