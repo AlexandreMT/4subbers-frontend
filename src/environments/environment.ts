@@ -1,4 +1,4 @@
 export const environment = {
-  API: 'https://cors-anywhere.herokuapp.com/https://api-4subbers.herokuapp.com/api',
+  API: 'http://localhost:4200/api',
   production: false
 };
